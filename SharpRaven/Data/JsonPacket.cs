@@ -24,14 +24,14 @@ namespace SharpRaven.Data {
         /// The record severity.
         /// Defaults to error.
         /// </summary>
-        //[JsonProperty(PropertyName = "level", NullValueHandling = NullValueHandling.Ignore)]
-        //public ErrorLevel Level { get; set; }
+        [JsonProperty(PropertyName = "level", NullValueHandling = NullValueHandling.Ignore)]
+        public string Level { get; set; }
         /// <summary>
         /// Indicates when the logging record was created (in the Sentry client).
         /// Defaults to DateTime.UtcNow()
         /// </summary>
-        //[JsonProperty(PropertyName = "timestamp", NullValueHandling = NullValueHandling.Ignore)]
-        //public DateTime TimeStamp { get; set; }
+        [JsonProperty(PropertyName = "timestamp", NullValueHandling = NullValueHandling.Ignore)]
+		public DateTime TimeStamp { get; set; }
         /// <summary>
         /// The name of the logger which created the record.
         /// If missing, defaults to the string root.
@@ -109,17 +109,17 @@ namespace SharpRaven.Data {
                 });
             }*/
             // Create timestamp
-            //TimeStamp = DateTime.UtcNow;
+			TimeStamp = DateTime.UtcNow;
             // Default logger.
             Logger = "root";
             // Default error level.
-            //Level = ErrorLevel.error;
+	        Level = ErrorLevel.Error;
             // Create a guid.
             EventID = Guid.NewGuid().ToString().Replace("-", String.Empty);
             // Create an exception.
             //Exception = new SentryException();
             // Project
-            Project = "default";
+            Project = "dafault";
         }
 
         /// <summary>

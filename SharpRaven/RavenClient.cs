@@ -55,7 +55,7 @@ namespace SharpRaven {
             return 0;
         }
 
-        public int CaptureMessage(string message, ErrorLevel level = ErrorLevel.info, string[] tags = null)
+        public int CaptureMessage(string message, string level = ErrorLevel.Info, string[] tags = null)
         {
             JsonPacket packet = new JsonPacket(CurrentDSN.ProjectID);
             packet.Message = message;
