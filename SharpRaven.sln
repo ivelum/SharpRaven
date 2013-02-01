@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpRaven", "SharpRaven\SharpRaven.csproj", "{CC80A2E1-AE39-44DE-8DA3-4EEF42F90FB1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpRaven.CaptureTest", "SharpRaven.CaptureTest\SharpRaven.CaptureTest.csproj", "{5183EE19-B1EE-4D57-B764-26259EB2B5BF}"

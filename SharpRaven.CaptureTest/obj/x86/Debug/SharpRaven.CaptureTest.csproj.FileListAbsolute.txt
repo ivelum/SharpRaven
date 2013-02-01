@@ -14,3 +14,11 @@ C:\Users\fmcg\Downloads\raven-csharp-master\raven-csharp-master\SharpRaven.Captu
 C:\Users\fmcg\Downloads\raven-csharp-master\raven-csharp-master\SharpRaven.CaptureTest\bin\Debug\Newtonsoft.Json.dll
 C:\Users\fmcg\Downloads\raven-csharp-master\raven-csharp-master\SharpRaven.CaptureTest\bin\Debug\SharpRaven.pdb
 C:\Users\fmcg\Downloads\raven-csharp-master\raven-csharp-master\SharpRaven.CaptureTest\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven.CaptureTest\obj\x86\Debug\SharpRaven.CaptureTest.csprojResolveAssemblyReference.cache
+C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven.CaptureTest\obj\x86\Debug\SharpRaven.CaptureTest.exe
+C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven.CaptureTest\bin\Debug\SharpRaven.CaptureTest.exe
+C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven.CaptureTest\bin\Debug\SharpRaven.CaptureTest.pdb
+C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven.CaptureTest\bin\Debug\SharpRaven.dll
+C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven.CaptureTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven.CaptureTest\bin\Debug\SharpRaven.pdb
+C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven.CaptureTest\obj\x86\Debug\SharpRaven.CaptureTest.pdb

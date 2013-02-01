@@ -10,3 +10,8 @@ C:\Users\fmcg\Downloads\raven-csharp-master\raven-csharp-master\SharpRaven\bin\D
 C:\Users\fmcg\Downloads\raven-csharp-master\raven-csharp-master\SharpRaven\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\fmcg\Downloads\raven-csharp-master\raven-csharp-master\SharpRaven\obj\Debug\SharpRaven.dll
 C:\Users\fmcg\Downloads\raven-csharp-master\raven-csharp-master\SharpRaven\obj\Debug\SharpRaven.pdb
+C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven\bin\Debug\SharpRaven.dll
+C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven\bin\Debug\SharpRaven.pdb
+C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven\obj\Debug\SharpRaven.dll
+C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven\obj\Debug\SharpRaven.pdb
