@@ -55,7 +55,12 @@ namespace SharpRaven.Data {
         /// A map or list of tags for this event.
         /// </summary>
         [JsonProperty(PropertyName = "tags", NullValueHandling = NullValueHandling.Ignore)]
-        public Tag[] Tags;
+        public string[][] Tags;
+        /// <summary>
+        /// An arbitrary mapping of additional metadata to store with the event.
+        /// </summary>
+        [JsonProperty(PropertyName = "extra", NullValueHandling = NullValueHandling.Ignore)]
+        public object Extra;
         /// <summary>
         /// Identifies the host client from which the event was recorded.
         /// </summary>
@@ -86,7 +91,7 @@ namespace SharpRaven.Data {
 
 			if (e.TargetSite != null)
 			{
-				Culprit = e.TargetSite.Name;
+				Culprit = String.Format("{0}.{1}", e.TargetSite.ReflectedType.FullName, e.TargetSite.Name);
 			}
 
             Project = project;
@@ -132,11 +137,6 @@ namespace SharpRaven.Data {
             //return @"{""project"": ""SharpRaven"",""event_id"": ""fc6d8c0c43fc4630ad850ee518f1b9d0"",""culprit"": ""my.module.function_name"",""timestamp"": ""2012-11-11T17:41:36"",""message"": ""SyntaxError: Wattttt!"",""sentry.interfaces.Exception"": {""type"": ""SyntaxError"",""value"": ""Wattttt!"",""module"": ""__builtins__""}""}";
         }
 
-    }
-
-    public class Tag {
-        public string Name;
-        public string Value;
     }
 
     public class Module {
