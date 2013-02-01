@@ -80,7 +80,7 @@ namespace SharpRaven
 
 		public bool Send(JsonPacket jp, DSN dsn)
 		{
-			try
+			//try
 			{
 				HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(dsn.SentryURI);
 				request.Method = "POST";
@@ -89,13 +89,15 @@ namespace SharpRaven
 				request.Headers.Add("X-Sentry-Auth", PacketBuilder.CreateAuthenticationHeader(dsn));
 				ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
 				request.UserAgent = "RavenSharp/1.0";
+				request.Timeout = 2000;
 
-				Console.WriteLine("Header: " + PacketBuilder.CreateAuthenticationHeader(dsn));
-				Console.WriteLine("Packet: " + jp.Serialize());
+				//Console.WriteLine("Header: " + PacketBuilder.CreateAuthenticationHeader(dsn));
+				//Console.WriteLine("Packet: " + jp.Serialize());
 
 				// Write the messagebody.
 				using (Stream s = request.GetRequestStream())
 				{
+					
 					using (StreamWriter sw = new StreamWriter(s))
 					{
 						// Compress and encode.
@@ -114,9 +116,9 @@ namespace SharpRaven
 					s.Flush();
 					s.Close();
 				}
-
+				
 				HttpWebResponse wr = (HttpWebResponse)request.GetResponse();
-			}
+			}/*
 			catch (WebException e)
 			{
 				Console.ForegroundColor = ConsoleColor.Red;
@@ -124,15 +126,18 @@ namespace SharpRaven
 				Console.ForegroundColor = ConsoleColor.Gray;
 				Console.WriteLine(e.Message);
 
-				string messageBody = String.Empty;
-				using (StreamReader sw = new StreamReader(e.Response.GetResponseStream()))
+				if (e.Response != null)
 				{
-					messageBody = sw.ReadToEnd();
+					string messageBody = String.Empty;
+					using (StreamReader sw = new StreamReader(e.Response.GetResponseStream()))
+					{
+						messageBody = sw.ReadToEnd();
+					}
+					Console.WriteLine("[MESSAGE BODY] " + messageBody);
 				}
-				Console.WriteLine("[MESSAGE BODY] " + messageBody);
 
 				return false;
-			}
+			}*/
 
 			return true;
 		}
