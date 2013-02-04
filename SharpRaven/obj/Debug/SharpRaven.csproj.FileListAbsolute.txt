@@ -3,4 +3,3 @@ C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven\bin\Debug\SharpRa
 C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven\bin\Debug\Newtonsoft.Json.dll
 C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven\obj\Debug\SharpRaven.dll
 C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven\obj\Debug\SharpRaven.pdb
-C:\Users\ChistyakovA.IVELUM\Dropbox\Code\SharpRaven\SharpRaven\obj\Debug\SharpRaven.csprojResolveAssemblyReference.cache

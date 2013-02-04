@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using SharpRaven.Data;
 using System.Net;
 using System.IO;
@@ -97,27 +98,18 @@ namespace SharpRaven
 				// Write the messagebody.
 				using (Stream s = request.GetRequestStream())
 				{
-					
-					using (StreamWriter sw = new StreamWriter(s))
-					{
-						// Compress and encode.
-						//string data = Utilities.GzipUtil.CompressEncode(jp.Serialize());
-						//Console.WriteLine("Writing: " + data);
-						// Write to the JSON script when ready.
-						string data = jp.Serialize();
-						if (LogScrubber != null)
-							data = LogScrubber.Scrub(data);
+					string data = jp.Serialize();
+					if (LogScrubber != null)
+						data = LogScrubber.Scrub(data);
+					byte[] byteArray = Encoding.UTF8.GetBytes(data);
 
-						sw.Write(data);
-						// Close streams.
-						sw.Flush();
-						sw.Close();
-					}
-					s.Flush();
-					s.Close();
+					s.Write(byteArray, 0, byteArray.Length);
 				}
-				
-				HttpWebResponse wr = (HttpWebResponse)request.GetResponse();
+
+				using (HttpWebResponse webResponse = (HttpWebResponse)request.GetResponse())
+				{
+				}
+
 			}/*
 			catch (WebException e)
 			{
