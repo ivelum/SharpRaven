@@ -18,14 +18,15 @@ namespace SharpRaven.Data
 			for (int i = 0; i < trace.FrameCount; i++)
 			{
 				StackFrame frame = trace.GetFrame(i);
-				Frames.Add(new ExceptionFrame()
-				{
-					AbsolutePath = frame.GetFileName(),
-					Filename = Path.GetFileName(frame.GetFileName()),
-					Function = frame.GetMethod().Name,
-					Source = formattedStackTrace[i + 1],
-					LineNumber = frame.GetFileLineNumber(),
-				});
+				if (!string.IsNullOrEmpty(frame.GetFileName()))
+					Frames.Add(new ExceptionFrame()
+					{
+						AbsolutePath = frame.GetFileName(),
+						Filename = Path.GetFileName(frame.GetFileName()),
+						Function = frame.GetMethod().Name,
+						Source = formattedStackTrace[i + 1],
+						LineNumber = frame.GetFileLineNumber(),
+					});
 			}
 		}
 
