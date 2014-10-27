@@ -88,7 +88,6 @@ namespace SharpRaven
 				request.Accept = "application/json";
 				request.ContentType = "application/json; charset=utf-8";
 				request.Headers.Add("X-Sentry-Auth", PacketBuilder.CreateAuthenticationHeader(dsn));
-				ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
 				request.UserAgent = "RavenSharp/1.0";
 				request.Timeout = 2000;
 
